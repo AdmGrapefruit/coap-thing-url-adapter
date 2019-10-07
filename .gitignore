@@ -1,0 +1,8 @@
+logs
+*.log
+*.config
+.idea
+
+node_modules/
+
+npm-debug.log
