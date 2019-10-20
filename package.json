@@ -3,7 +3,7 @@
   "display_name": "CoAP Web Thing",
   "version": "0.1.0",
   "description": "CoAP web thing support",
-  "author": "Mozilla IoT",
+  "author": "AdmGrapefruit",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ."
@@ -14,14 +14,14 @@
     "adapter",
     "wot"
   ],
-  "homepage": "https://github.com/mozilla-iot/thing-url-adapter",
+  "homepage": "https://github.com/AdmGrapefruit/coap-thing-url-adapter",
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mozilla-iot/thing-url-adapter.git"
+    "url": "https://github.com/AdmGrapefruit/coap-thing-url-adapter.git"
   },
   "bugs": {
-    "url": "https://github.com/mozilla-iot/thing-url-adapter/issues"
+    "url": "https://github.com/AdmGrapefruit/coap-thing-url-adapter/issues"
   },
   "files": [
     "LICENSE",

@@ -6,4 +6,4 @@ Based on [thing-url-adapter](https://github.com/mozilla-iot/thing-url-adapter) b
 
 ## Notes
 
-If you're trying to **MANUALLY** add a server (e.g. if mDNS discovery isn't working) that contains multiple web things, i.e. the "multiple-coap-things" example from the [webthing-node](https://github.com/AdmGrapefruit/webthing-node) library, you'll have to add them individually. You can do so by addressing them numerically, i.e. `coap://myserver.local:5683/0` and `coap://myserver.local:5683/1`.
+If you're trying to **MANUALLY** add a server (e.g. if mDNS discovery isn't working) that contains multiple web things, i.e. the "multiple-coap-things" example from the [coap-webthing-node](https://github.com/AdmGrapefruit/coap-webthing-node) library, you'll have to add them individually. You can do so by addressing them numerically, i.e. `coap://myserver.local:5683/0` and `coap://myserver.local:5683/1`.

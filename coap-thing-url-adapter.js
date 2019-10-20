@@ -15,7 +15,6 @@ const coap = require('coap');
 
 const {
   Adapter,
-  Constants,
   Database,
   Device,
   Event,
@@ -25,7 +24,7 @@ const {
 let webthingBrowser;
 let coapBrowser;
 
-class ThingURLProperty extends Property {
+class CoapThingURLProperty extends Property {
   constructor(device, name, url, propertyDescription) {
     super(device, name, propertyDescription);
     this.url = url;
@@ -61,7 +60,7 @@ class ThingURLProperty extends Property {
   }
 }
 
-class ThingURLDevice extends Device {
+class CoapThingURLDevice extends Device {
   constructor(adapter, id, url, description, mdnsUrl) {
     super(adapter, id);
     this.title = this.name = description.title || description.name;
@@ -149,7 +148,7 @@ class ThingURLDevice extends Device {
               return l;
             });
           }
-          const property = new ThingURLProperty(
+          const property = new CoapThingURLProperty(
               this, propertyName, propertyUrl, propertyDescription);
           this.properties.set(propertyName, property);
           return payload;
@@ -447,7 +446,7 @@ class CoapThingUrlAdapter extends Adapter {
   }
 
   /**
-   * Add a ThingURLDevice to the CoapThingUrlAdapter
+   * Add a CoapThingURLDevice to the CoapThingUrlAdapter
    *
    * @param {String} deviceId ID of the device to add.
    * @return {Promise} which resolves to the device added.
@@ -458,7 +457,7 @@ class CoapThingUrlAdapter extends Adapter {
         reject(`Device: ${deviceId} already exists.`);
       } else {
         const device =
-          new ThingURLDevice(this, deviceId, deviceURL, description, mdnsUrl);
+          new CoapThingURLDevice(this, deviceId, deviceURL, description, mdnsUrl);
         Promise.all(device.propertyPromises).then(() => {
           this.handleDeviceAdded(device);
           resolve(device);
@@ -468,7 +467,7 @@ class CoapThingUrlAdapter extends Adapter {
   }
 
   /**
-   * Remove a ThingURLDevice from the CoapThingUrlAdapter.
+   * Remove a CoapThingURLDevice from the CoapThingUrlAdapter.
    *
    * @param {Object} device The device to remove.
    * @return {Promise} which resolves to the device removed.
