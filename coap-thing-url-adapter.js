@@ -586,12 +586,12 @@ function fetchCoap(url, options) {
 
     req.on('timeout', (e) => {
       req.removeAllListeners();
-      throw e;
+      reject(e);
     });
 
     req.on('error', (e) => {
       req.removeAllListeners();
-      throw e;
+      reject(e);
     });
 
     if (!options.payload) {
