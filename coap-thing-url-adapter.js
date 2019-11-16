@@ -594,7 +594,7 @@ function fetchCoap(url, options) {
       reject(e);
     });
 
-    if (!options.payload) {
+    if (options.payload == null) {
       req.end();
     } else {
       req.end(options.payload);
